@@ -3,17 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página con Gráfico</title>
+  <title>Modo Oscuro/Claro</title>
+  <style>
+    :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .modo-oscuro {
+      --bg-color: black;
+      --text-color: white;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Bienvenido a mi Página</h1>
-  <p>A continuación, se muestra el gráfico:</p>
-  <iframe src="https://andresarodriguez.github.io/graph01/grafico.html" 
-          width="800" 
-          height="400" 
-          style="border: none;">
-  </iframe>
+  <h1>Bienvenido a Mi Página</h1>
+  <button id="modoToggle">Cambiar a Modo Oscuro</button>
+
+  <script>
+    const boton = document.getElementById('modoToggle');
+    boton.addEventListener('click', () => {
+      document.body.classList.toggle('modo-oscuro');
+      boton.textContent = 
+        document.body.classList.contains('modo-oscuro') 
+        ? 'Cambiar a Modo Claro' 
+        : 'Cambiar a Modo Oscuro';
+    });
+  </script>
 </body>
 </html>
+
 
 
