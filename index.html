@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modo Oscuro/Claro con Gráfico</title>
+  <title>Modo Oscuro por Defecto</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     :root {
@@ -43,11 +43,11 @@
     }
   </style>
 </head>
-<body>
+<body class="modo-oscuro">
   <h1>Bienvenido a Mi Página con Gráfico</h1>
-  <button id="modoToggle">Cambiar a Modo Oscuro</button>
+  <button id="modoToggle">Cambiar a Modo Claro</button>
 
-  <canvas id="miGrafico" width="200" height="100"></canvas>
+  <canvas id="miGrafico" width="400" height="200"></canvas>
 
   <script>
     // Código para el gráfico
